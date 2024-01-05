@@ -9,9 +9,9 @@ const messageElement = document.querySelector('#message');
 //Função de converter para unidades
 function convert() {
     // Obter os valores das unidades de entrada e saída
-    const fromValue = fromElement.value;
-    const toValue = toElement.value;
     const inputValue = parseFloat(inputElement.value);
+    const fromValue = fromElement.value;
+    const toValue = toElement.value;    
 
     // Verificar se o valor de entrada é um número válido
     if (isNaN(inputValue)) {
@@ -20,7 +20,6 @@ function convert() {
         return;
     }
 
-
      // Verificar se as unidades de entrada e saída são iguais
     if (fromValue === toValue) {
         outputElement.value = inputElement.value;
@@ -28,7 +27,7 @@ function convert() {
         return;
     }
 
-    // Converter o valor de entrada para metros    
+    // Converter o valor de entrada para metros uniformizando a medida    
     let meters;
     switch (fromValue) {
         case 'm':
