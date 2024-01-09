@@ -4,12 +4,16 @@ h1 {
   }
   
   .gallery {
-    display: flex;
-    flex-wrap: wrap;
+    display: flex;  /* Flex: imagens uma ao lado da outra */
+    flex-wrap: wrap; /* wrap: quebra a linha qdo não houver mais espaço */
   }
   
   .gallery-item {
-    flex: 0 0 calc(33.333% - 10px);
+    /* Flex:
+    0 flex-grow(não preenche o espaço extra),
+    0 flex-shrink(não encolherá por falta de espaço)
+    calc(33.333% - 10px) flex-basis(dimensão inicial do galley-item) */
+    flex: 0 0 calc(33.333% - 10px); 
     margin: 5px;
   }
   
@@ -22,8 +26,8 @@ h1 {
     height: auto;
     transition: transform 0.2s ease-in-out;
     height: 300px;
-    object-fit: cover;
-    cursor: pointer;
+    object-fit: cover;  /* Adequa a imagem para não perder qualidade ao se esticar */
+    cursor: pointer; /* efeito de zoom */
   }
   
   .gallery-image:hover {

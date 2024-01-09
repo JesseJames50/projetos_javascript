@@ -10,7 +10,8 @@ galleryItems.forEach((item) => {
       .getAttribute("data-src");
     lightboxImage.setAttribute("src", imageUrl);
     lightbox.style.display = "flex";
-  });
+    console.log(`o caminho é: ` + imageUrl);
+  });  
 });
 
 lightboxClose.addEventListener("click", () => {
